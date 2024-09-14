@@ -95,6 +95,6 @@ The following endpoints are used:
 ## Contact
 
 If you have any questions or suggestions, 
-feel free to reach out via (mailto:abiabdullahinshaalloh@gmail.com).
+feel free to reach out via (abiabdullahinshaalloh@gmail.com).
 
 ---
