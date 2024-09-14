@@ -1,0 +1,30 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_markdown/flutter_markdown.dart';
+import 'package:get/get.dart';
+
+class IssueDetailsView extends StatelessWidget {
+  const IssueDetailsView({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    String issue=Get.arguments;
+    return Scaffold(
+      body: SingleChildScrollView(
+        child: SafeArea(
+          child: Padding(
+            padding: EdgeInsets.all(16),
+            child: Column(
+              children: [
+                MarkdownBody(data: issue.toString() ??"No details available",
+                  styleSheet: MarkdownStyleSheet(
+                      p:TextStyle(fontSize: 14),
+                      code: TextStyle(fontSize: 12,color: Colors.green)
+                  ),)
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
