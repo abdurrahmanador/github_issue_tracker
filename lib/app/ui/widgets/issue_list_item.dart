@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:github_issue_tracker/app/routes/routes.dart';
 
 import '../../datas/models/issue_data.dart';
+import '../../utils/constants.dart';
 
 class IssueListItem extends StatelessWidget {
   final IssueData commit;  // Pass the issue data
@@ -33,13 +34,13 @@ class IssueListItem extends StatelessWidget {
                   width: MediaQuery.of(context).size.width * 0.75,
                   child: Text(
                     commit.title ?? 'No title',
-                    style: const TextStyle(fontSize: 16),
+                    style: const TextStyle(fontSize: TextSizes.medium),
                   ),
                 ),
                 const Spacer(),
                 Text(
                   displayDate,
-                  style: const TextStyle(fontSize: 12),
+                  style: const TextStyle(fontSize: TextSizes.small),
                 ),
                 const Spacer(),
               ],
@@ -49,13 +50,13 @@ class IssueListItem extends StatelessWidget {
               children: [
                 CircleAvatar(
                   backgroundColor: Colors.red,
-                  radius: 10,
+                  radius: RadiusValues.radius10,
                   child: Image.network(commit.user?.avatarUrl ?? ''),
                 ),
                 const SizedBox(width: 8),
                 Text(
                   assignee,
-                  style: const TextStyle(fontSize: 12),
+                  style: const TextStyle(fontSize: TextSizes.small),
                 ),
               ],
             ),

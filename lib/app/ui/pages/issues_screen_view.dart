@@ -6,6 +6,7 @@ import 'package:github_issue_tracker/app/datas/services/api_services.dart';
 import 'package:github_issue_tracker/app/ui/widgets/issue_list_item.dart';
 import 'package:intl/intl.dart';
 
+import '../../utils/constants.dart';
 import '../widgets/custom_search_bar.dart';
 
 class IssuesScreenView extends StatelessWidget {
@@ -14,7 +15,7 @@ class IssuesScreenView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    final issueController = Get.find<IssueScreenController>();
+    final issueController = Get.find<IssueScreenController>();//finding_or_calling_issue_controller
 
     return Scaffold(
       body: SafeArea(
@@ -26,19 +27,19 @@ class IssuesScreenView extends StatelessWidget {
                 children: [
                   const Text(
                     "Flutter Issue List",
-                    style: TextStyle(fontSize: 16),
+                    style: TextStyle(fontSize: TextSizes.medium),
                   ),
                   const SizedBox(width: 16),
                   Container(
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(16),
-                      color: Colors.grey,
+                      borderRadius: BorderRadius.circular(RadiusValues.radius16),
+                      color: AppColors.grey,
                     ),
                     child: const Padding(
                       padding: EdgeInsets.only(left: 8.0, right: 8.0),
                       child: Text(
                         "master",
-                        style: TextStyle(fontSize: 12),
+                        style: TextStyle(fontSize: TextSizes.small),
                       ),
                     ),
                   )
@@ -73,11 +74,12 @@ class IssuesScreenView extends StatelessWidget {
                         child: ListView.separated(
                           separatorBuilder: (context, index) {
                             return const Divider(
-                              color: Colors.grey,
+                              color: AppColors.grey,
                             );
                           },
                           itemCount: issueController.filteredIssueList.length,
                           itemBuilder: (context, index) {
+
                             final commit =
                                 issueController.filteredIssueList[index];
 
@@ -85,7 +87,8 @@ class IssuesScreenView extends StatelessWidget {
                             final createdAt =
                                 commit.createdAt.toString();
 
-
+                            //this_is_because_we_wanted_to_show_proper_time_if_any_issue_found_within_current_date_then
+                            //_it_will_show_time_only_rest_will_show_dates
                             DateTime createdDate=DateTime.parse(createdAt);
                             DateTime currentDate=DateTime.now();
                             bool isToday=createdDate.year==currentDate.year&&createdDate.month==currentDate.month&&createdDate.day==currentDate.day;
@@ -97,12 +100,14 @@ class IssuesScreenView extends StatelessWidget {
 
                             }
 
+                            //showing_issue_items
                             return IssueListItem(commit: commit, displayDate: displayDate); //Issue List Item from widgets folder
                           },
                         ));
                   }
                 }),
               ),
+              //for_paginations_indicator
               Obx(() => issueController.isLoading.value
                   ? const CircularProgressIndicator()
                   : Container())

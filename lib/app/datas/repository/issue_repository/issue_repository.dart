@@ -1,6 +1,5 @@
 import 'package:github_issue_tracker/app/datas/models/issue_data.dart';
 import 'package:github_issue_tracker/app/datas/services/api_services.dart';
-import 'package:http/http.dart' as http;
 
 class IssueRepository {
 

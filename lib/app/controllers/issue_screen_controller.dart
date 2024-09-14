@@ -5,9 +5,11 @@ import 'package:github_issue_tracker/app/datas/repository/issue_repository/issue
 
 class IssueScreenController extends GetxController {
   final IssueRepository issueRepository;
+  IssueScreenController(this.issueRepository);
 
-  RxList<IssueData> issueList = <IssueData>[].obs;
-  RxList<IssueData> filteredIssueList=<IssueData>[].obs;
+  RxList<IssueData> issueList = <IssueData>[].obs;//for_storing_all_issues
+  RxList<IssueData> filteredIssueList=<IssueData>[].obs;//for_storing_filtered_issues
+
   RxString searchQuery = ''.obs;
   int issuesPerPage = 10;
   int page = 1;
@@ -15,7 +17,6 @@ class IssueScreenController extends GetxController {
   //for_showing_loader_till_fetch_data
   RxBool isLoading = false.obs;
 
-  IssueScreenController(this.issueRepository);
 
   @override
   void onInit() {
@@ -35,7 +36,7 @@ class IssueScreenController extends GetxController {
             .toList();
         page++;
       }
-      // Handle case when no more issues are returned (e.g., all issues are fetched)
+      // handle_case_when_no_more_issues_are_returned
       if (newIssues == null || newIssues.isEmpty) {
         Get.snackbar('', 'No more issues found!');
       }

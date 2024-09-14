@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:github_issue_tracker/app/utils/constants.dart';
 
 class UserProfileView extends StatelessWidget {
   const UserProfileView({super.key});
 
   @override
   Widget build(BuildContext context) {
+
     return const Scaffold(
       body: SafeArea(
         child: Padding(
@@ -16,7 +18,7 @@ class UserProfileView extends StatelessWidget {
                 child: CircleAvatar(
                   backgroundImage: AssetImage("assets/images/img.png"),
 
-                  radius: 80,
+                  radius: RadiusValues.radius80,
                 ),
               ),
               SizedBox(
@@ -24,12 +26,12 @@ class UserProfileView extends StatelessWidget {
               ),
               Text(
                 "Francisco Miles",
-                style: TextStyle(fontSize: 24),
+                style: TextStyle(fontSize: TextSizes.extraLarge),
               ),
               Text(
                 "@francisco_miles",
                 style: TextStyle(
-                  fontSize: 14,
+                  fontSize:  TextSizes.size14,
                   color: Color(0xffC9C9C9),
                 ),
               ),
@@ -38,7 +40,7 @@ class UserProfileView extends StatelessWidget {
               ),
               Text(
                 "Bio: There once was...",
-                style: TextStyle(fontSize: 17),
+                style: TextStyle(fontSize: TextSizes.size17),
               ),
               SizedBox(
                 height: 20,
@@ -48,15 +50,15 @@ class UserProfileView extends StatelessWidget {
                 children: [
                   Text(
                     "Public Repos: 2",
-                    style: TextStyle(fontSize: 17),
+                    style: TextStyle(fontSize: TextSizes.size17),
                   ),
                   Text(
                     "Public Gists: 5",
-                    style: TextStyle(fontSize: 17),
+                    style: TextStyle(fontSize: TextSizes.size17),
                   ),
                   Text(
                     "Private Repos: 5",
-                    style: TextStyle(fontSize: 17),
+                    style: TextStyle(fontSize: TextSizes.size17),
                   ),
                 ],
               )

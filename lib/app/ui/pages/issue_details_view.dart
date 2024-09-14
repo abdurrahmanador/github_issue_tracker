@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:get/get.dart';
+import 'package:github_issue_tracker/app/utils/constants.dart';
 
 class IssueDetailsView extends StatelessWidget {
   const IssueDetailsView({super.key});
@@ -17,8 +18,8 @@ class IssueDetailsView extends StatelessWidget {
               children: [
                 MarkdownBody(data: issue.toString() ??"No details available",
                   styleSheet: MarkdownStyleSheet(
-                      p:TextStyle(fontSize: 14),
-                      code: TextStyle(fontSize: 12,color: Colors.green)
+                      p:TextStyle(fontSize: TextSizes.medium),
+                      code: TextStyle(fontSize: TextSizes.small,color: AppColors.codeColor)
                   ),)
               ],
             ),

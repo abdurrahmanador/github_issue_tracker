@@ -8,13 +8,13 @@ import 'package:github_issue_tracker/app/ui/pages/user_profile_view.dart';
 import 'package:github_issue_tracker/app/ui/pages/issue_details_view.dart';
 
 class AppRoutes {
-  // Define route names as constants
+  //defining_page_name_as_constants
   static const String home = '/';
   static const String issues = '/issues';
   static const String issueDetails = '/issue-details';
   static const String profile = '/profile';
 
-  // Define route pages using GetPage for GetX routing
+  // defining_detailed_routes
   static List<GetPage> routes = [
     GetPage(
         name: home,

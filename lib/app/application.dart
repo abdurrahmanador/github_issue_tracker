@@ -4,6 +4,7 @@ import 'package:github_issue_tracker/app/bindings/app_dependencies.dart';
 import 'package:github_issue_tracker/app/routes/routes.dart';
 import 'package:github_issue_tracker/app/ui/pages/home_screen_view.dart';
 import 'package:github_issue_tracker/app/ui/pages/user_profile_view.dart';
+import 'package:github_issue_tracker/app/utils/constants.dart';
 
 class GithubIssueTracker extends StatelessWidget {
   const GithubIssueTracker({super.key});
@@ -23,15 +24,15 @@ class GithubIssueTracker extends StatelessWidget {
         splashColor: Colors.transparent,   // Removes splash effect globally
         highlightColor: Colors.transparent,  // Removes highlight effect globally
           brightness: Brightness.dark,
-        primaryColorDark: Colors.black54, // Dark primary color
-        scaffoldBackgroundColor: Colors.grey[900], // Set background to grey
+        primaryColorDark: AppColors.primaryColor, // Dark primary color
+        scaffoldBackgroundColor:AppColors.grey900, // Set background to grey
         appBarTheme: AppBarTheme(
-          backgroundColor: Colors.grey[850], // App bar color in dark mode
-          titleTextStyle: TextStyle(color: Colors.white), // White app bar text
+          backgroundColor: AppColors.grey850, // App bar color in dark mode
+          titleTextStyle: TextStyle(color: AppColors.white), // White app bar text
         ),
         textTheme: const TextTheme(
-          bodyText1: TextStyle(color: Colors.white), // White body text
-          bodyText2: TextStyle(color: Colors.white), // White body text
+          bodyText1: TextStyle(color:AppColors.white), // White body text
+          bodyText2: TextStyle(color: AppColors.white), // White body text
         ),
       ),
 

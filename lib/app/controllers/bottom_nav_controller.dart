@@ -8,6 +8,7 @@ class BottomNavController extends GetxController{
   RxInt currentIndex=0.obs;
 
 
+  //pages_that_developer_want_to_see_others
   RxList pages=[
     const IssuesScreenView(),
     const UserProfileView()
