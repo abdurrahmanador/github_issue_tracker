@@ -39,13 +39,13 @@ The state is managed by **GetX** controllers for cleaner separation of concerns 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/github-issue-tracker.git
+   git clone https://github.com/abdurrahmanador/github_issue_tracker.git
    ```
 
 2. Navigate to the project directory:
 
    ```bash
-   cd github-issue-tracker
+   cd github_issue_tracker
    ```
 
 3. Install dependencies:
