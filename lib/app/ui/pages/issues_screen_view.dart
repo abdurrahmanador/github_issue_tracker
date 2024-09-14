@@ -14,8 +14,8 @@ class IssuesScreenView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
-    final issueController = Get.find<IssueScreenController>();//finding_or_calling_issue_controller
+    final issueController =
+        Get.find<IssueScreenController>(); //finding_or_calling_issue_controller
 
     return Scaffold(
       body: SafeArea(
@@ -32,7 +32,8 @@ class IssuesScreenView extends StatelessWidget {
                   const SizedBox(width: 16),
                   Container(
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(RadiusValues.radius16),
+                      borderRadius:
+                          BorderRadius.circular(RadiusValues.radius16),
                       color: AppColors.grey,
                     ),
                     child: const Padding(
@@ -52,7 +53,6 @@ class IssuesScreenView extends StatelessWidget {
 
               const SizedBox(height: 20),
               Expanded(
-
                 // Use Obx to observe the issueList and update UI accordingly
                 child: Obx(() {
                   if (issueController.filteredIssueList.isEmpty &&
@@ -79,29 +79,33 @@ class IssuesScreenView extends StatelessWidget {
                           },
                           itemCount: issueController.filteredIssueList.length,
                           itemBuilder: (context, index) {
-
                             final commit =
                                 issueController.filteredIssueList[index];
 
-
-                            final createdAt =
-                                commit.createdAt.toString();
+                            final createdAt = commit.createdAt.toString();
 
                             //this_is_because_we_wanted_to_show_proper_time_if_any_issue_found_within_current_date_then
                             //_it_will_show_time_only_rest_will_show_dates
-                            DateTime createdDate=DateTime.parse(createdAt);
-                            DateTime currentDate=DateTime.now();
-                            bool isToday=createdDate.year==currentDate.year&&createdDate.month==currentDate.month&&createdDate.day==currentDate.day;
+                            DateTime createdDate = DateTime.parse(createdAt);
+                            DateTime currentDate = DateTime.now();
+                            bool isToday =
+                                createdDate.year == currentDate.year &&
+                                    createdDate.month == currentDate.month &&
+                                    createdDate.day == currentDate.day;
                             String displayDate;
-                            if(isToday){
-                              displayDate=DateFormat('HH:mm').format(createdDate);
-                            }else{
-                              displayDate=DateFormat('yyyy-MM-dd').format(createdDate);
-
+                            if (isToday) {
+                              displayDate =
+                                  DateFormat('HH:mm').format(createdDate);
+                            } else {
+                              displayDate =
+                                  DateFormat('yyyy-MM-dd').format(createdDate);
                             }
 
                             //showing_issue_items
-                            return IssueListItem(commit: commit, displayDate: displayDate); //Issue List Item from widgets folder
+                            return IssueListItem(
+                                commit: commit,
+                                displayDate:
+                                    displayDate); //Issue List Item from widgets folder
                           },
                         ));
                   }
@@ -118,4 +122,3 @@ class IssuesScreenView extends StatelessWidget {
     );
   }
 }
-

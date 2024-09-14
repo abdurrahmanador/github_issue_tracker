@@ -40,7 +40,7 @@ class IssueListItem extends StatelessWidget {
                 const Spacer(),
                 Text(
                   displayDate,
-                  style: const TextStyle(fontSize: TextSizes.small),
+                  style: const TextStyle(fontSize: TextSizes.small,fontFamily: "SourceCodePro",color: AppColors.issueDateTimeColor),
                 ),
                 const Spacer(),
               ],
@@ -56,7 +56,7 @@ class IssueListItem extends StatelessWidget {
                 const SizedBox(width: 8),
                 Text(
                   assignee,
-                  style: const TextStyle(fontSize: TextSizes.small),
+                  style: const TextStyle(fontSize: TextSizes.small,fontFamily: "SourceCodePro",color: AppColors.issueDateTimeColor),
                 ),
               ],
             ),

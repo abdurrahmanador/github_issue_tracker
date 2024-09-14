@@ -13,8 +13,16 @@ class CustomSearchBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: MediaQuery.of(context).size.height * 0.05,
+
+    //for_orientated_search_bar_height
+   final orientation= MediaQuery.of(context).orientation;
+   double? searchBarHeight=orientation==Orientation.portrait?
+   MediaQuery.of(context).size.height * 0.05:MediaQuery.of(context).size.height * 0.07;
+
+
+
+   return Container(
+      height: searchBarHeight,
       decoration:
       BoxDecoration(borderRadius: BorderRadius.circular(RadiusValues.radius16)),
       child: TextFormField(

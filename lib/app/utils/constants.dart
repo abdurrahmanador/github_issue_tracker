@@ -15,6 +15,7 @@ class AppColors {
    static const Color grey900 = Color(0xff212121);
    static const Color grey850 = Color(0xff303030);
    static const Color grey = Color(0xff9E9E9E);
+   static const Color issueDateTimeColor = Color(0xffB8B8B8);
 
    static const Color white = Color(0xffFFFFFF);
 

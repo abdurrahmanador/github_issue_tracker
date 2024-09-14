@@ -8,19 +8,22 @@ class IssueDetailsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    String issue=Get.arguments;
+    String issue = Get.arguments;
     return Scaffold(
       body: SingleChildScrollView(
         child: SafeArea(
           child: Padding(
-            padding: EdgeInsets.all(16),
+            padding:const  EdgeInsets.all(16),
             child: Column(
               children: [
-                MarkdownBody(data: issue.toString() ??"No details available",
+                MarkdownBody(
+                  data: issue.toString() ?? "No details available",
                   styleSheet: MarkdownStyleSheet(
-                      p:TextStyle(fontSize: TextSizes.medium),
-                      code: TextStyle(fontSize: TextSizes.small,color: AppColors.codeColor)
-                  ),)
+                      p: const TextStyle(fontSize: TextSizes.medium),
+                      code: const TextStyle(
+                          fontSize: TextSizes.small,
+                          color: AppColors.codeColor)),
+                )
               ],
             ),
           ),

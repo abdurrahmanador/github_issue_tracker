@@ -9,18 +9,19 @@ class HomeScreenView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
-    final bottomNavController = Get.find<BottomNavController>();//finding_that_controller
+    final bottomNavController =
+        Get.find<BottomNavController>(); //finding_that_controller
 
     return Scaffold(
-      body:Obx(()=> bottomNavController.currentPage),
+      body: Obx(() => bottomNavController.currentPage),
       bottomNavigationBar: Obx(
         () => BottomNavigationBar(
           currentIndex: bottomNavController.currentIndex.value,
           onTap: bottomNavController.changePages,
-          selectedItemColor:AppColors.selectedLabelColor,
+          selectedItemColor: AppColors.selectedLabelColor,
           showSelectedLabels: true,
-          selectedLabelStyle: const TextStyle(color: AppColors.selectedLabelColor),
+          selectedLabelStyle:
+              const TextStyle(color: AppColors.selectedLabelColor),
           items: const [
             BottomNavigationBarItem(
               icon: Icon(Icons.list),
