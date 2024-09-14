@@ -60,6 +60,28 @@ The state is managed by **GetX** controllers for cleaner separation of concerns 
    flutter run
    ```
 
+
+___
+
+## Environment Configuration
+
+This project supports multiple environments (development and production) through separate configuration files. 
+
+### Configuration Files
+
+- **`main_dev.dart`**: Configuration for the development environment.
+- **`main_prod.dart`**: Configuration for the production environment.
+
+### Switching Between Environments
+
+To run the app in a specific environment, use the following commands:
+
+- **For Development**:
+  ```bash
+  flutter run -t lib/main_dev.dart
+  
+
+  
 ## API Integration
 
 This app uses GitHub's REST API to fetch issues from the `flutter/flutter` repository. 
