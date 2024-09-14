@@ -3,7 +3,7 @@
 # GitHub Issue Tracker App
 
 This is a Flutter-based GitHub Issue Tracker app that allows users to view, 
-search, and filter issues from GitHub repositories. Specifically, 
+search issues from GitHub repositories. Specifically, 
 the app retrieves and displays issues from the `flutter/flutter` repository.
 
 ## Features
@@ -39,13 +39,13 @@ The state is managed by **GetX** controllers for cleaner separation of concerns 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/github-issue-tracker.git
+   git clone https://github.com/abdurrahmanador/github_issue_tracker.git
    ```
 
 2. Navigate to the project directory:
 
    ```bash
-   cd github-issue-tracker
+   cd github_issue_tracker
    ```
 
 3. Install dependencies:
@@ -95,6 +95,6 @@ The following endpoints are used:
 ## Contact
 
 If you have any questions or suggestions, 
-feel free to reach out via (mailto:abiabdullahinshaalloh@gmail.com).
+feel free to reach out via (abiabdullahinshaalloh@gmail.com).
 
 ---
