@@ -110,6 +110,11 @@ The following endpoints are used:
 
 - Flutter SDK
 - A device or emulator running Android or iOS
+___
+Video(not the latest one)
+_ 
+## Watch the Video
+(https://youtu.be/UFl-D4FLbnA)
 
 
 
