@@ -3,7 +3,7 @@
 # GitHub Issue Tracker App
 
 This is a Flutter-based GitHub Issue Tracker app that allows users to view, 
-search, and filter issues from GitHub repositories. Specifically, 
+search issues from GitHub repositories. Specifically, 
 the app retrieves and displays issues from the `flutter/flutter` repository.
 
 ## Features
